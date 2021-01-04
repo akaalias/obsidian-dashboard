@@ -2,10 +2,11 @@
     export let dashboardManager;
 </script>
 
-<h1>Dashboard</h1>
-
-<h2>All Files</h2>
-{dashboardManager.getFileCount()}
-
-<h2>Markdown Files</h2>
-{dashboardManager.getMarkdownFileCount()}
+<r-grid columns=1>
+    <r-cell span=1>
+        <h2>Notes</h2>
+        <div class="metric">
+            {dashboardManager.getMarkdownFileCount()}
+        </div>
+    </r-cell>
+</r-grid>

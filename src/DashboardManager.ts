@@ -1,14 +1,14 @@
 import type {Vault} from "obsidian";
+import * as fs from "fs";
+import path from "path";
 
 export default class DashboardManager {
     private vault: Vault;
+    private files: [];
 
     constructor(vault: Vault) {
         this.vault = vault;
-    }
-
-    getFileCount() {
-        return this.vault.getFiles().length;
+        this.files  = [];
     }
 
     getMarkdownFileCount() {

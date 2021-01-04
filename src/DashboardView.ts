@@ -34,7 +34,6 @@ export default class DashboardView extends ItemView {
         this.dashboard = new Dashboard({
             target: (this as any).contentEl,
             props: {
-                fileCount: this.dashboardManager.getFileCount(),
                 dashboardManager: this.dashboardManager
             }
         });
