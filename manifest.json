@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-dashboard",
+	"name": "Dashboard",
+	"version": "0.0.1",
+	"minAppVersion": "0.9.12",
+	"description": "Shows you your vault metrics and trends",
+	"author": "Alexis Rondeau",
+	"authorUrl": "https://publish.obsidian.md/alexisrondeau",
+	"isDesktopOnly": false
+}
