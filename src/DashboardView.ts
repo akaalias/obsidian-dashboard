@@ -4,9 +4,12 @@ import DashboardManager from "./DashboardManager";
 
 export default class DashboardView extends ItemView {
     private dashboard: Dashboard;
+    private dashboardManager: DashboardManager;
 
     constructor(leaf: WorkspaceLeaf) {
         super(leaf);
+
+        this.dashboardManager = new DashboardManager(this.app.vault)
     }
 
     getDisplayText(): string {
@@ -30,7 +33,10 @@ export default class DashboardView extends ItemView {
 
         this.dashboard = new Dashboard({
             target: (this as any).contentEl,
-            props: {dashboardManager: new DashboardManager()}
+            props: {
+                fileCount: this.dashboardManager.getFileCount(),
+                dashboardManager: this.dashboardManager
+            }
         });
     }
 }
